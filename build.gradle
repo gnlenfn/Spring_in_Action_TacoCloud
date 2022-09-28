@@ -30,10 +30,20 @@ dependencies {
     implementation 'com.h2database:h2:1.4.196'
     implementation 'constraints:constraints:0.1.10'
     implementation 'org.springframework.boot:spring-boot-starter-validation:2.7.3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.7.4'
+    // https://mvnrepository.com/artifact/org.springframework.ldap/spring-ldap-core
+    implementation group: 'org.springframework.ldap', name: 'spring-ldap-core', version: '2.4.1'
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-ldap
+    implementation group: 'org.springframework.security', name: 'spring-security-ldap', version: '5.7.3'
+
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation group: 'org.springframework.security', name: 'spring-security-test', version: '5.7.3'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-ldap
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-ldap', version: '2.7.4'
+
 }
 
 tasks.named('test') {
